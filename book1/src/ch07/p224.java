@@ -1,5 +1,11 @@
 package ch07;
 
-public class p224 {
 
-}
+
+
+public class p224 {
+	
+		
+	}
+	
+
