@@ -7,7 +7,7 @@ package sb01;
  * 내용 : 자바 연산자 연습문제
  * 
  */
-public class Test3 {
+public class Test03 {
 	public static void main(String[] args) {
 		
 		int num = 1;

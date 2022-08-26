@@ -6,7 +6,7 @@ package sb01;
  * 내용 : 자바 자료형 연습문제 
  * 
  */
-public class Test1 {
+public class Test01 {
 	public static void main(String[] args) {
 		char var1 = 'A';
 		int  var2 = 100;
@@ -27,6 +27,7 @@ public class Test1 {
 		System.out.println("var6 : "+var6 );
 		System.out.println("var7 : "+var7 );
 		System.out.println("var8 : "+var8 );
+		System.out.println("var9 : "+var9 );
 		
 				
 		
