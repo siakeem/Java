@@ -34,7 +34,7 @@ public class InsertTest {
 		Statement stmt =conn.createStatement();
 		
 		//4단계 - SQL 실행
-		String sql = "INSERT INTO `User1` VALUES ('a101','김유신','010-1234-1001',25);";
+		String sql = "INSERT INTO `User1` VALUES ('a101','김유신','010-1234-1001',25"+ ");";
 		stmt.executeUpdate(sql);
 		
 		//5단계 - 결과처리(SELECT인 경우)
