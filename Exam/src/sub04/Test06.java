@@ -4,8 +4,8 @@ package sub04;
  * 이름 : 김시아
  * 내용 : 자바 API클래스 연습문제
  */
-class Apple{
-	
+class Apple {
+
 	private String country;
 	private int price;
 	
@@ -20,8 +20,7 @@ class Apple{
 	}
 }
 
-class Banana{
-	
+class Banana {
 	private String country;
 	private int price;
 	
@@ -29,6 +28,7 @@ class Banana{
 		this.country = country;
 		this.price = price;
 	}
+	
 	public void show() {
 		System.out.println("원산지 : "+country);
 		System.out.println("가격 : "+price);
@@ -36,7 +36,6 @@ class Banana{
 }
 
 class Grape extends Object{
-	
 	private String country;
 	private int price;
 	
@@ -49,33 +48,35 @@ class Grape extends Object{
 		System.out.println("원산지 : "+country);
 		System.out.println("가격 : "+price);
 	}
-}	
+}
+
 public class Test06 {
 	public static void main(String[] args) {
-	
+		
 		Test06 test = new Test06();
 		
-		Apple apple = new Apple("한국", 3000);
+		Apple  apple  = new Apple("한국", 3000);
 		Banana banana = new Banana("필리핀", 2000);
-		Grape grape = new Grape("미국", 3000);
+		Grape  grape  = new Grape("미국", 3000);
 		
 		test.showInfo(apple);
 		test.showInfo(banana);
 		test.showInfo(grape);
-		
 	}
+	
 	public void showInfo(Object fruit) {
 		
 		if(fruit instanceof Apple) {
-			Apple apple = (Apple)fruit;
+			Apple apple = (Apple) fruit;
+			apple.show();
 			
 		}else if(fruit instanceof Banana) {
-			Banana banana = (Banana)fruit;
+			Banana banana = (Banana) fruit;
+			banana.show();
 			
 		}else if(fruit instanceof Grape) {
-			Grape grape = (Grape)fruit;
-			
+			Grape grape = (Grape) fruit;
+			grape.show();
 		}
 	}
-
 }

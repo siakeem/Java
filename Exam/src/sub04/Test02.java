@@ -8,12 +8,11 @@ import java.util.Scanner;
  * 이름 : 김시아
  * 내용 : 예외처리 연습문제
  */
-class NotFoundException extends Exception {
-	public NotFoundException() {
+class MyNotFoundException extends Exception {
+	public MyNotFoundException() {
 		super("해당하는 숫자를 찾을 수 없습니다.");
 	}
 }
-
 
 public class Test02 {
 	
@@ -26,12 +25,11 @@ public class Test02 {
 		System.out.print("찾을 숫자 입력 : ");
 		int find = sc.nextInt();
 		
-		try {
-			searcharray(find, arr);
-			System.out.println("해당하는 숫자 찾음!!");
+		try {			
+			searchArray(find, arr);
+			System.out.println("해당하는 숫자 찾음!!!");
 			
-			
-		}catch(myNotFoundExcetion e) {
+		}catch (MyNotFoundException e) {
 			System.out.println(e.getMessage());
 			
 		}finally {
@@ -39,20 +37,15 @@ public class Test02 {
 		}
 		
 		System.out.println("프로그램 정상 종료...");
-		
 	}
+	
+	public static void searchArray(int find, int[] arr) throws MyNotFoundException {
 
-	private static void searcharray(int find, int[] arr) throws NotFoundException{
-		
 		for(int i : arr) {
 			if(i == find) {
 				return;
 			}
 		}
-		
-		throw new NotFoundException();
-		
-		
+		throw new MyNotFoundException();
 	}
-
 }
